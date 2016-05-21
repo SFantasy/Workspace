@@ -1,13 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { render } from 'react-dom'
+import { Router, Route, browserHistory } from 'react-router'
+import './style.scss'
 
-class App extends Component {
-  render () {
-    return <h1>Workspace</h1>
-  }
-}
+import App from './containers/App'
+import Settings from './containers/Settings'
 
 render(
-  <App />,
+  <Router history={browserHistory}>
+    <Route path='/' component={App} />
+    <Route path='/settings' component={Settings} />
+  </Router>,
   document.getElementById('app')
 )

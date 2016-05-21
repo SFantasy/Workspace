@@ -1,0 +1,89 @@
+// Global settings
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  color: #212121;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f1f1f1;
+  -webkit-font-smoothing: antialiased;
+  text-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+  transition: color .3s ease;
+  font-size: .7rem;
+  &:hover {
+    color: #333;
+  }
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+// Header
+.ws-header {
+  padding: .5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #263238;
+  .ws-header__left {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.ws-name {
+  margin: 0;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.ws-link {
+  color: #ddd;
+  &:hover {
+    color: white;
+  }
+  span {
+    font-size: 1rem;
+  }
+}
+
+// Footer
+.ws-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: .5rem 1rem;
+  p {
+    margin: 0;
+    font-size: .7rem;
+    color: #333;
+  }
+}
