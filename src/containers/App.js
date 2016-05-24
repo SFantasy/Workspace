@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import Todo from './Todo'
+import Space from './Space'
 
 export default class App extends Component {
 
@@ -13,6 +15,10 @@ export default class App extends Component {
           </div>
           <a className='ws-link' title='View on github' href='https://github.com/SFantasy/Workspace'><span className='octicon octicon-mark-github' /></a>
         </header>
+        <div className="ws-container">
+          <Todo />
+          <Space />
+        </div>
         <footer className='ws-footer'>
           <p>Copyright &copy; 2016 <a href='http://fantasy.codes'>Fantasy Shao</a></p>
         </footer>
