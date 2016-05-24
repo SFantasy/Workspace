@@ -1,0 +1,25 @@
+.ws-todo-container {
+  width: 20rem;
+  background-color: white;
+  border-radius: 2px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .14);
+}
+
+.todo-header {
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 100;
+    color: #666;
+    margin: 0;
+  }
+
+  input {
+    font-size: .8rem;
+    border: none;
+    width: 100%;
+    outline: none;
+    padding: .5rem;
+    border-bottom: 1px solid #e2e2e2;
+  }
+}

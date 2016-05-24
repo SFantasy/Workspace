@@ -75,6 +75,12 @@ a {
   }
 }
 
+.ws-container {
+  display: flex;
+  padding: 1rem;
+  min-height: calc(100vh - 89px);
+}
+
 // Footer
 .ws-footer {
   position: absolute;
@@ -87,3 +93,6 @@ a {
     color: #333;
   }
 }
+
+@import './sass/_todo';
+@import './sass/_space';
