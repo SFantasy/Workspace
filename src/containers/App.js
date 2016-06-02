@@ -5,6 +5,10 @@ import Space from './Space'
 
 export default class App extends Component {
 
+  constructor (props) {
+    super(props)
+  }
+
   render () {
     return (
       <main className='container'>
@@ -15,7 +19,7 @@ export default class App extends Component {
           </div>
           <a className='ws-link' title='View on github' href='https://github.com/SFantasy/Workspace'><span className='octicon octicon-mark-github' /></a>
         </header>
-        <div className="ws-container">
+        <div className='ws-container'>
           <Todo />
           <Space />
         </div>

@@ -56,5 +56,33 @@
     font-size: .8rem;
     color: #666;
     border-bottom: 1px dashed #e2e2e2;
+    display: flex;
+    align-items: center;
+
+    .content {
+      margin: 0;
+      color: #333;
+      &.done {
+        text-decoration: line-through;
+        color: #777;
+      }
+    }
+
+    .checkbox {
+      font-family: Capitals, sans-serif;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 1px solid #e2e2e2;
+      cursor: pointer;
+      margin-right: .25rem;
+      border-radius: 50%;
+      &.done {
+        border: 1px solid #0bc;
+        color: #0bc;
+      }
+    }
   }
 }

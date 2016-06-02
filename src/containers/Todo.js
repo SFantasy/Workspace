@@ -18,7 +18,7 @@ class Todo extends Component {
 
   render () {
     return (
-      <div className="ws-todo-container">
+      <div className='ws-todo-container'>
         <TodoHeader addTodo={this.handleSave.bind(this)} />
         <TodoList todos={this.state.todos} />
       </div>

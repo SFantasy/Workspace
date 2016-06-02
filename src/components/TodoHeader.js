@@ -4,6 +4,7 @@ class TodoHeader extends Component {
 
   constructor (props) {
     super(props)
+
     this.state = {
       text: this.props.text || ''
     }
@@ -11,16 +12,16 @@ class TodoHeader extends Component {
 
   render () {
     return (
-      <div className="todo-header">
+      <div className='todo-header'>
         <h1>Todo List</h1>
-        <div className="todo-header__container">
-          <input type="text" autoFocus="true"
+        <div className='todo-header__container'>
+          <input type='text' autoFocus='true'
                  value={this.state.text}
-                 placeholder="What needs to be done?"
+                 placeholder='What needs to be done?'
                  onChange={this.handleChange.bind(this)}
                  onKeyDown={this.handleKeyDown.bind(this)}
           />
-          <button className="todo-header__btn" onClick={this.handleSave.bind(this)}>ADD</button>
+          <button className='todo-header__btn' onClick={this.handleSave.bind(this)}>ADD</button>
         </div>
       </div>
     )
