@@ -40,7 +40,9 @@ export default class TodoList extends Component {
           [index, 0, todo]
         ]
       }
-    }))
+    }), () => {
+      this.props.onChange(this.state)
+    })
   }
 
   componentWillReceiveProps (props) {

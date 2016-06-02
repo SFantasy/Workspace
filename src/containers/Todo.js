@@ -3,6 +3,8 @@ import TodoHeader from '../components/TodoHeader'
 import TodoList from '../components/TodoList'
 import update from 'react/lib/update'
 
+const TODO_STORE_KEY = 'WORKSPACE_TODO_LIST'
+
 class Todo extends Component {
   constructor (props) {
     super(props)
@@ -13,14 +15,20 @@ class Todo extends Component {
   }
 
   componentDidMount () {
+    let todos = localStorage.getItem(TODO_STORE_KEY)
 
+    if (todos) {
+      this.setState({
+        todos: JSON.parse(todos)
+      })
+    }
   }
 
   render () {
     return (
       <div className='ws-todo-container'>
         <TodoHeader addTodo={this.handleSave.bind(this)} />
-        <TodoList todos={this.state.todos} />
+        <TodoList todos={this.state.todos} onChange={this.saveTodos.bind(this)} />
       </div>
     )
   }
@@ -33,11 +41,17 @@ class Todo extends Component {
       time: 0
     }
 
-    this.setState(update(this.state, {
+    this.saveTodos(update(this.state, {
       todos: {
         $push: [todo]
       }
     }))
+  }
+
+  saveTodos (state) {
+    this.setState(state, () => {
+      localStorage.setItem(TODO_STORE_KEY, JSON.stringify(state['todos']))
+    })
   }
 }
 
