@@ -20,6 +20,41 @@
     width: 100%;
     outline: none;
     padding: .5rem;
+    color: #666;
     border-bottom: 1px solid #e2e2e2;
+  }
+
+  .todo-header__container {
+    display: flex;
+  }
+
+  .todo-header__btn {
+    cursor: pointer;
+    font-size: .7rem;
+    color: #666;
+    background-color: white;
+    padding: .5rem 1rem;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    margin-left: .5rem;
+    outline: none;
+    font-weight: 100;
+    &:hover {
+      color: #0bc;
+      transition: all .3s ease;
+      border: 1px solid #0bc;
+    }
+  }
+}
+
+.todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    padding: .5rem 0;
+    font-size: .8rem;
+    color: #666;
+    border-bottom: 1px dashed #e2e2e2;
   }
 }

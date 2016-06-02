@@ -1,22 +1,44 @@
 import React, { PropTypes, Component } from 'react'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
 import TodoHeader from '../components/TodoHeader'
-import * as TodoActions from '../actions/todo'
+import TodoList from '../components/TodoList'
+import update from 'react/lib/update'
 
 class Todo extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      todos: []
+    }
+  }
+
+  componentDidMount () {
+
+  }
+
   render () {
     return (
       <div className="ws-todo-container">
-        <TodoHeader />
+        <TodoHeader addTodo={this.handleSave.bind(this)} />
+        <TodoList todos={this.state.todos} />
       </div>
     )
   }
-}
 
-Todo.propTypes = {
-  todos: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
+  handleSave (text) {
+    let todo = {
+      id: this.state.todos.length,
+      text: text,
+      done: false,
+      time: 0
+    }
+
+    this.setState(update(this.state, {
+      todos: {
+        $push: [todo]
+      }
+    }))
+  }
 }
 
 export default Todo

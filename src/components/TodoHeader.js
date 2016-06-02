@@ -13,31 +13,41 @@ class TodoHeader extends Component {
     return (
       <div className="todo-header">
         <h1>Todo List</h1>
-        <input type="text" autoFocus="true"
-               value={this.state.text}
-               placeholder="What needs to be done?"
-               onBlur={this.handleBlur.bind(this)}
-               onChange={this.handleChange.bind(this)}
-               onKeyDown={this.handleKeyDown.bind(this)}
-        />
+        <div className="todo-header__container">
+          <input type="text" autoFocus="true"
+                 value={this.state.text}
+                 placeholder="What needs to be done?"
+                 onChange={this.handleChange.bind(this)}
+                 onKeyDown={this.handleKeyDown.bind(this)}
+          />
+          <button className="todo-header__btn" onClick={this.handleSave.bind(this)}>ADD</button>
+        </div>
       </div>
     )
   }
 
-  handleBlur (e) {
-
-  }
-
   handleKeyDown (e) {
-
+    if (e.which === 13) {
+      this.handleSave()
+    }
   }
 
   handleChange (e) {
-
+    this.setState({
+      text: e.target.value
+    })
   }
 
-  handleSave (text) {
-    if (text.length !== 0) this.props.addTodo(text)
+  handleSave () {
+    let text = this.state.text.trim()
+
+    if (text.length !== 0) {
+      this.setState({
+        text: ''
+      })
+
+      this.props.addTodo(text)
+    }
   }
 }
 
