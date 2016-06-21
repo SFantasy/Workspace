@@ -52,6 +52,7 @@
   padding: 0;
   list-style: none;
   li {
+    position: relative;
     padding: .5rem 0;
     font-size: .8rem;
     color: #666;
@@ -82,6 +83,18 @@
       &.done {
         border: 1px solid #0bc;
         color: #0bc;
+      }
+    }
+
+    .del {
+      position: absolute;
+      right: .5rem;
+      font-family: Capitals, sans-serif;
+      cursor: pointer;
+      color: #999;
+      transition: all .3s ease;
+      &:hover {
+        color: #666;
       }
     }
   }

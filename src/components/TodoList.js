@@ -6,7 +6,7 @@ export default class TodoList extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      todos: props.todos
+      todos: props.todos,
     }
   }
 
@@ -26,10 +26,25 @@ export default class TodoList extends Component {
               {todo.done ? '✓' : ''}
             </span>
             <p className={`content ${todo.done ? 'done' : ''}`}>{todo.text}</p>
+            <span
+              className='del'
+              onClick={this._delete.bind(this, index)}>✕</span>
           </li>
         )}
       </ul>
     )
+  }
+
+  _delete (index) {
+    this.setState(update(this.state, {
+      todos: {
+        $splice: [
+          [index, 1]
+        ]
+      }
+    }), () => {
+      this.props.onChange(this.state)
+    });
   }
 
   _update (todo, index) {
