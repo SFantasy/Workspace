@@ -7,6 +7,11 @@ Keep concentrated and productive.
 
 Just run `npm start` in your terminal.
 
+## Features
+
+- [x] Basic TODO list
+- [ ] Counter for TODO list
+
 ## License
 
 The MIT License
