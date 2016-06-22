@@ -7,10 +7,9 @@ Keep concentrated and productive.
 
 Just run `npm start` in your terminal.
 
-## Features
+### Code style
 
-- [x] Basic TODO list
-- [ ] Counter for TODO list
+Use [standard](http://standardjs.com/) style.
 
 ## License
 
