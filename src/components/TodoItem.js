@@ -25,9 +25,9 @@ export default class TodoItem extends Component {
                   done: !this.state.data.done
                 }
               }
-            }, () => {
-              this.props.onChange.bind(this, this.state.data)
-            }))
+            }), () => {
+              this.props.onChange(this.state.data)
+            })
           }}>
           {todo.done ? '✓' : ''}
         </span>

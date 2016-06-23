@@ -39,7 +39,7 @@ export default class TodoList extends Component {
       }
     }), () => {
       this.props.onChange(this.state)
-    });
+    })
   }
 
   _update (todo, index) {
