@@ -1,5 +1,5 @@
 .ws-todo-container {
-  width: 20rem;
+  width: 25rem;
   background-color: white;
   border-radius: 2px;
   padding: 1rem;
@@ -7,13 +7,6 @@
 }
 
 .todo-header {
-  h1 {
-    font-size: 1.6rem;
-    font-weight: 100;
-    color: #666;
-    margin: 0;
-  }
-
   input {
     font-size: .8rem;
     border: none;
@@ -61,8 +54,10 @@
     align-items: center;
 
     .content {
+      flex: 1;
       margin: 0;
       color: #666;
+      padding-right: 2.5rem;
       &.done {
         text-decoration: line-through;
         color: #777;
@@ -86,15 +81,29 @@
       }
     }
 
-    .del {
+    .todo-actions {
       position: absolute;
       right: .5rem;
-      font-family: Capitals, sans-serif;
-      cursor: pointer;
-      color: #999;
-      transition: all .3s ease;
-      &:hover {
-        color: #666;
+
+      .count {
+        font-size: .6rem;
+      }
+
+      .del {
+        font-family: Capitals, sans-serif;
+      }
+
+      .time,
+      .count,
+      .del {
+        display: inline-block;
+        margin-left: .5rem;
+        cursor: pointer;
+        color: #999;
+        transition: all .3s ease;
+        &:hover {
+          color: #666;
+        }
       }
     }
   }

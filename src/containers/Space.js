@@ -1,9 +1,11 @@
-import React, { PropTypes, Component } from 'react'
+import React, { Component } from 'react'
 
 class Space extends Component {
   render () {
     return (
-      <div className="ws-space-container"></div>
+      <div className="ws-space-container">
+        <h2 className='ws-h2'>Space</h2>
+      </div>
     )
   }
 }

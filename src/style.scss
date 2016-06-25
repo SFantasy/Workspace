@@ -1,10 +1,13 @@
+@import './sass/_todo';
+@import './sass/_space';
+
 * {
   box-sizing: border-box;
 }
 
 html {
   font-size: 20px;
-  color: #212121;
+  color: #233333;
   height: 100%;
   overflow: hidden;
 }
@@ -15,7 +18,7 @@ body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   background-color: #f1f1f1;
   -webkit-font-smoothing: antialiased;
-  text-adjust: 100%;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -79,6 +82,13 @@ a {
   min-height: calc(100vh - 89px);
 }
 
+.ws-h2 {
+  font-size: 1.6rem;
+  font-weight: 100;
+  color: #666;
+  margin: 0;
+}
+
 // Footer
 .ws-footer {
   position: absolute;
@@ -91,6 +101,3 @@ a {
     color: #333;
   }
 }
-
-@import './sass/_todo';
-@import './sass/_space';

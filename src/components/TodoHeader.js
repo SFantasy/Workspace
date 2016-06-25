@@ -13,7 +13,7 @@ class TodoHeader extends Component {
   render () {
     return (
       <div className='todo-header'>
-        <h1>Todo List</h1>
+        <h2 className='ws-h2'>Todo List</h2>
         <div className='todo-header__container'>
           <input type='text' autoFocus='true'
                  value={this.state.text}
