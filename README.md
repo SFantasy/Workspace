@@ -3,6 +3,13 @@ Workspace
 
 Keep concentrated and productive.
 
+## Features
+
+- Todo list with timer
+- Space for collecting wisdom
+- Hacker News
+- White noise music
+
 ## Develop
 
 Just run `npm start` in your terminal.
@@ -13,4 +20,4 @@ Use [standard](http://standardjs.com/) style.
 
 ## License
 
-The MIT License
+[MIT License](LICENSE.md) (c) [Fantasy Shao](http://fantasy.codes)
